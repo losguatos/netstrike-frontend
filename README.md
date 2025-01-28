@@ -11,7 +11,7 @@ A fast-paced hacker-themed digital card game. Built with React, it features a si
 
 ## Documentation
 
-For more detailed information about the project, check out the [Documentation](./docs/Documentation.md).
+For more detailed information about the project, check out the [Documentation](./Docs/Documentation.md).
 
 ---
 
