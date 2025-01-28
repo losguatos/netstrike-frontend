@@ -9,7 +9,11 @@
 
 A fast-paced hacker-themed digital card game. Built with React, it features a simple, interactive UI for strategic card play, leveraging blockchain for player progress and in-game transactions
 
+## Documentation
 
+For more detailed information about the project, check out the [Documentation](./docs/Documentation.md).
+
+---
 
 ##  SetUp Guide 
 
