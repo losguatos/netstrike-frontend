@@ -4,9 +4,9 @@
 
 1. [Introduction](#introduction)
 2. [Installation](#installation)
-3. [Game Rules](./documentation/GameRules.md)
-4. [Game Simulation](./documentation/GameFlowExample.md)
-5. [Cards List](./documentation/Cards.md)
+3. [Game Rules](./GameRules.md)
+4. [Game Simulation](./GameFlowExample.md)
+5. [Cards List](./Cards.md)
 6. [Multiplayer](#multiplayer)
 7. [Troubleshooting](#troubleshooting)
 8. [Credits](#credits)
