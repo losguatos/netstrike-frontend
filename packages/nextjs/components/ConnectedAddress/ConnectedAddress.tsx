@@ -1,7 +1,7 @@
 "use client";
 import { useAccount } from "~~/hooks/useAccount";
-import { Address } from "./scaffold-stark";
 import { Address as AddressType } from "@starknet-react/chains";
+import { Address } from "./Address";
 
 export const ConnectedAddress = () => {
   const connectedAddress = useAccount();
