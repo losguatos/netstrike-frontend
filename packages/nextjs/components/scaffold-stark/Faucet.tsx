@@ -8,14 +8,13 @@ import {
   AddressInput,
   Balance,
   EtherInput,
-} from "~~/components/scaffold-stark";
+} from "~~/components/Scaffold-stark";
 import { useNetwork, useProvider } from "@starknet-react/core";
 import { mintEth } from "~~/services/web3/faucet";
 import { notification } from "~~/utils/scaffold-stark";
 import GenericModal from "./CustomConnectButton/GenericModal";
 
 /**
- * Faucet modal which lets you send ETH to any address.
  */
 export const Faucet = () => {
   const [loading, setLoading] = useState(false);

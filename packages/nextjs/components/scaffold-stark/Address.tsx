@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Address as AddressType } from "@starknet-react/chains";
-import { getChecksumAddress, validateChecksumAddress } from "starknet";
+import { getChecksumAddress } from "starknet";
 import { devnet } from "@starknet-react/chains";
 import {
   CheckCircleIcon,
@@ -12,11 +12,10 @@ import {
 } from "@heroicons/react/24/outline";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
-import { BlockieAvatar } from "~~/components/scaffold-stark/BlockieAvatar";
 import { useScaffoldStarkProfile } from "~~/hooks/scaffold-stark/useScaffoldStarkProfile";
 import { getStarknetPFPIfExists } from "~~/utils/profile";
 import { default as NextImage } from "next/image";
-import ConnectModal from "./CustomConnectButton/ConnectModal";
+import { BlockieAvatar } from "./BlockieAvatar";
 
 type AddressProps = {
   address?: AddressType;

@@ -3,7 +3,7 @@ import {
   CommonInputProps,
   InputBase,
   isValidInteger,
-} from "~~/components/scaffold-stark";
+} from "~~/components/Scaffold-stark";
 import { parseEther } from "ethers";
 
 type IntegerInputProps = CommonInputProps<string | bigint> & {

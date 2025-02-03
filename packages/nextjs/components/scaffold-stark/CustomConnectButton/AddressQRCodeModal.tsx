@@ -1,6 +1,6 @@
 import { QRCodeSVG } from "qrcode.react";
 import { Address as AddressType } from "@starknet-react/chains";
-import { Address } from "~~/components/scaffold-stark";
+import { Address } from "~~/components/Scaffold-stark";
 
 type AddressQRCodeModalProps = {
   address: AddressType;

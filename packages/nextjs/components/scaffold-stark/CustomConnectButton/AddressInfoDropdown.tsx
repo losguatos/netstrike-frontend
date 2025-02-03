@@ -13,7 +13,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { useLocalStorage } from "usehooks-ts";
-import { BlockieAvatar, isENS } from "~~/components/scaffold-stark";
+import { BlockieAvatar, isENS } from "~~/components/Scaffold-stark";
 import { useOutsideClick } from "~~/hooks/scaffold-stark";
 import { BurnerConnector, burnerAccounts } from "@scaffold-stark/stark-burner";
 import { getTargetNetworks } from "~~/utils/scaffold-stark";

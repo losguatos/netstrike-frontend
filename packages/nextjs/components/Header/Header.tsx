@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { useAccount, useNetwork, useProvider } from "@starknet-react/core";
-import { HeaderMenuLinks } from "./HeaderMenuLinks/HeaderMenuLinks";
 import { CustomConnectButton } from "../Scaffold-stark/CustomConnectButton";
+import { HeaderMenuLinks } from "./HeaderMenuLinks";
 
 export const Header = () => {
   const { targetNetwork } = useTargetNetwork();

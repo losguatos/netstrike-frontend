@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
-import { InputBase, IntegerInput } from "~~/components/scaffold-stark";
+import { InputBase, IntegerInput } from "~~/components/Scaffold-stark";
 import { AbiParameter } from "~~/utils/scaffold-stark/contract";
 import {
   addError,

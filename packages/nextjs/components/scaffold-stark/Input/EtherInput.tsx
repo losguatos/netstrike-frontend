@@ -4,7 +4,7 @@ import {
   CommonInputProps,
   InputBase,
   SIGNED_NUMBER_REGEX,
-} from "~~/components/scaffold-stark";
+} from "~~/components/Scaffold-stark";
 import { useGlobalState } from "~~/services/store/store";
 
 const MAX_DECIMALS_USD = 2;

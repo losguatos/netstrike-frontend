@@ -4,7 +4,7 @@
 import { useReducer, useState } from "react";
 import dynamic from "next/dynamic";
 import { ContractReadMethods } from "./ContractReadMethods";
-import { Address, Balance } from "~~/components/scaffold-stark";
+import { Address, Balance } from "~~/components/Scaffold-stark";
 import {
   useDeployedContractInfo,
   useNetworkColor,
@@ -15,7 +15,7 @@ import {
   ContractName,
 } from "~~/utils/scaffold-stark/contract";
 import { ContractVariables } from "./ContractVariables";
-import { ClassHash } from "~~/components/scaffold-stark/ClassHash";
+import { ClassHash } from "~~/components/Scaffold-stark/ClassHash";
 
 const ContractWriteMethods = dynamic(
   () =>
