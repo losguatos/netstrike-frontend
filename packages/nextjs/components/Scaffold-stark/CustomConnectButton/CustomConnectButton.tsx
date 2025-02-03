@@ -1,17 +1,15 @@
 "use client";
 
+/
 // @refresh reset
 import { useEffect, useMemo, useState } from "react";
 import { Balance } from "../Balance";
-import { AddressInfoDropdown } from "~~/components/Scaffold-stark/CustomConnectButton/AddressInfoDropdown";
-import { AddressQRCodeModal } from "~~/components/Scaffold-stark/CustomConnectButton/AddressQRCodeModal";
-import { WrongNetworkDropdown } from "~~/components/Scaffold-stark/CustomConnectButton/WrongNetworkDropdown";
+import { AddressInfoDropdown, AddressQRCodeModal, ConnectModal, WrongNetworkDropdown } from "../CustomConnectButton";
 import { useAutoConnect, useNetworkColor } from "~~/hooks/scaffold-stark";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
 import { useAccount, useNetwork } from "@starknet-react/core";
 import { Address } from "@starknet-react/chains";
-import ConnectModal from "~~/components/Scaffold-stark/CustomConnectButton/ConnectModal";
 
 /**
  * Custom Connect Button (watch balance + custom design)

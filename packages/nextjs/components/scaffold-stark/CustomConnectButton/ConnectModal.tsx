@@ -12,7 +12,7 @@ const loader = ({ src }: { src: string }) => {
   return src;
 };
 
-const ConnectModal = () => {
+export const ConnectModal = () => {
   const modalRef = useRef<HTMLInputElement>(null);
   const [isBurnerWallet, setIsBurnerWallet] = useState(false);
   const { resolvedTheme } = useTheme();
@@ -139,5 +139,3 @@ const ConnectModal = () => {
     </div>
   );
 };
-
-export default ConnectModal;
