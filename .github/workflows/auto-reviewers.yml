@@ -2,6 +2,12 @@ name: Auto Assign Reviewers
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write # ✅ Needed for assigning reviewers, approvals
+  contents: read
 
 jobs:
   assign_reviewers:
@@ -10,5 +16,5 @@ jobs:
       - name: Auto Assign Reviewers
         uses: hmarr/auto-approve-action@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Uses the built-in token
           reviewers: "Nan0ck, Con0r-69"
