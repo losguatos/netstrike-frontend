@@ -1,0 +1,6 @@
+addReviewers: true
+addAssignees: author
+reviewers:
+  - Nan0ck
+  - Con0r-69
+numberOfReviewers: 0
