@@ -16,7 +16,6 @@ const ScaffoldStarkApp = ({ children }: { children: React.ReactNode }) => {
       <body className="crt">
         <StarkAppProviders>
           <div className="text-primary font-console flex relative flex-col min-h-screen bg-main">
-            <Header />
             {children}
           </div>
           <Toaster />
