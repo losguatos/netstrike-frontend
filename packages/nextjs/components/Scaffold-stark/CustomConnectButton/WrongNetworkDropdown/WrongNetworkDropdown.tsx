@@ -1,4 +1,3 @@
-import { NetworkOptions } from "./NetworkOptions";
 import {
   ArrowLeftEndOnRectangleIcon,
   ChevronDownIcon,

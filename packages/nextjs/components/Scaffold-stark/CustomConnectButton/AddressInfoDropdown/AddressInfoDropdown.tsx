@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { NetworkOptions } from "./NetworkOptions";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { createPortal } from "react-dom";
 import {
@@ -23,6 +22,7 @@ import { getStarknetPFPIfExists } from "~~/utils/profile";
 import { useScaffoldStarkProfile } from "~~/hooks/scaffold-stark/useScaffoldStarkProfile";
 import { useTheme } from "next-themes";
 import { default as NextImage } from "next/image";
+import { NetworkOptions } from "../NetworkOptions";
 
 const allowedNetworks = getTargetNetworks();
 
