@@ -3,8 +3,8 @@
 
 export default function page () {
     return (
-        <div className=" w-full h-screen flex flex-col items-center justify-between text-center  pt-12 pb-5 px-4 gap-[12%] " >
-            <div className=" h-full max-h-[400px] flex flex-col justify-between items-center  w-full max-w-[504px] ">
+        <div className=" w-full min-h-screen flex flex-col items-center justify-between text-center  pt-12 pb-5 px-4 gap-[12%] " >
+            <div className=" h-full min-h-[300px] flex flex-col justify-between items-center  w-full max-w-[504px] ">
                 <div  className=" w-full  text-center">
                 <span className="flex flex-row items-end justify-center w-full  p-0 gap-2 " ><h1 className="text-[64px] font-medium leading-none p-0 m-0 text-[#46FD25] " >NETSTRIKE</h1><small className="text-[#46FD25] text-2xl font-medium m-0 " >v0.1</small>  </span>
                 <h2 className="text-[#46FD25] text-5xl font-medium " >Secure Terminal Login</h2>
