@@ -1,5 +1,4 @@
 import { HeaderMenuLink } from "./HeaderMenuLinks.types";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export const menuLinks: HeaderMenuLink[] = [
@@ -10,12 +9,9 @@ export const menuLinks: HeaderMenuLink[] = [
 ];
 
 export const HeaderMenuLinks = () => {
-  const pathname = usePathname();
-
   return (
     <>
       {menuLinks.map(({ label, href, icon }) => {
-        const isActive = pathname === href;
         return (
           <li key={href}>
             <Link
