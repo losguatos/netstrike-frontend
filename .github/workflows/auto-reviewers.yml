@@ -1,20 +1,14 @@
-name: Auto Assign Reviewers
+name: "Auto Assign"
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   pull_request_target:
-    types: [opened, synchronize, reopened]
-
-permissions:
-  pull-requests: write # ✅ Needed for assigning reviewers, approvals
-  contents: read
+    types: [opened, ready_for_review]
+  pull_request:
+    types: [opened, ready_for_review]
 
 jobs:
-  assign_reviewers:
+  add-reviews:
     runs-on: ubuntu-latest
     steps:
-      - name: Auto Assign Reviewers
-        uses: Kentaro-m/auto-assign-action@v2.0.0
+      - uses: kentaro-m/auto-assign-action@v2.0.0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }} # Uses the built-in token
-          reviewers: "Nan0ck, Con0r-69"
+          configuration-path: ".github/auto-assign-config.yml" # Only needed if you use something other than .github/auto_assign.yml
