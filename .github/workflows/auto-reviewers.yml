@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto Assign Reviewers
-        uses: hmarr/auto-approve-action@v3
+        uses: Kentaro-m/auto-assign-action@v2.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Uses the built-in token
           reviewers: "Nan0ck, Con0r-69"
