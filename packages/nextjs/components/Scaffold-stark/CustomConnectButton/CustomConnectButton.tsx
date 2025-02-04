@@ -1,10 +1,14 @@
 "use client";
 
-/
 // @refresh reset
 import { useEffect, useMemo, useState } from "react";
 import { Balance } from "../Balance";
-import { AddressInfoDropdown, AddressQRCodeModal, ConnectModal, WrongNetworkDropdown } from "../CustomConnectButton";
+import {
+  AddressInfoDropdown,
+  AddressQRCodeModal,
+  ConnectModal,
+  WrongNetworkDropdown,
+} from "../CustomConnectButton";
 import { useAutoConnect, useNetworkColor } from "~~/hooks/scaffold-stark";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
