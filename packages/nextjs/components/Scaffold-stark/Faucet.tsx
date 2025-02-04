@@ -12,7 +12,7 @@ import {
 import { useNetwork, useProvider } from "@starknet-react/core";
 import { mintEth } from "~~/services/web3/faucet";
 import { notification } from "~~/utils/scaffold-stark";
-import GenericModal from "./CustomConnectButton/GenericModal/GenericModal";
+import { GenericModal } from "./CustomConnectButton/GenericModal";
 
 /**
  */

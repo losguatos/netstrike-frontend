@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 
-const GenericModal = ({
+export const GenericModal = ({
   children,
   className = "modal-box modal-border bg-modal  rounded-[8px] border flex flex-col gap-3 justify-around relative",
   modalId,
@@ -21,5 +21,3 @@ const GenericModal = ({
     </label>
   );
 };
-
-export default GenericModal;

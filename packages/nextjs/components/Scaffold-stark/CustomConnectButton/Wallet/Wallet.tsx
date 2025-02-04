@@ -3,7 +3,7 @@ import { Connector } from "@starknet-react/core";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-const Wallet = ({
+export const Wallet = ({
   handleConnectWallet,
   connector,
   loader,
@@ -58,5 +58,3 @@ const Wallet = ({
     </button>
   ) : null;
 };
-
-export default Wallet;
