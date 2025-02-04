@@ -9,7 +9,8 @@
 5. [Cards List](./Cards.md)
 6. [Multiplayer](#multiplayer)
 7. [Troubleshooting](#troubleshooting)
-8. [Credits](#credits)
+8. [Designs](https://www.figma.com/design/yj7B1C8cDeQgjIAGyhDeQw/NetStrike?node-id=0-1&p=f&t=2Hgg18aZdY7Kg4gV-0)
+9. [Credits](#credits)
 
 <!-- ## Introduction
 Welcome to **NetStrike**, an action-packed multiplayer card game where strategy and skill determine the victor. This documentation will guide you through the installation process, gameplay mechanics, controls, and more.
