@@ -1,0 +1,13 @@
+name: Auto Assign Reviewers
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  assign_reviewers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Assign Reviewers
+        uses: hmarr/auto-approve-action@v3
+        with:
+          reviewers: "Nan0ck"
