@@ -4,9 +4,12 @@ import styles from './not-found.styles';
 export default function NotFound() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>404: Not Found</h1>
+      <div className={styles.title}>
+        <span className={styles.title404}>404</span>
+        <span className={styles.titleText}>:Not Found</span>
+      </div>
       <p className={styles.subtitle}>
-        Congratulations! You have successfully navigated to nowhere. This page is either missing, classified, or hiding from you specifically. :(
+        Congratulations! You've successfully navigated to nowhere. This page is either missing, classified, or hiding from you specifically. :(
       </p>
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>What Happens Next?</h2>
@@ -23,9 +26,11 @@ export default function NotFound() {
         <Link href="/" className={styles.cta}>
           Retreat Gracefully
         </Link>
+        <span className={styles.separator}>|</span>
         <Link href="/" className={styles.cta}>
           Try Again, But Smarter
         </Link>
+        <span className={styles.separator}>|</span>
         <Link href="/" className={styles.cta}>
           Report This to Someone Who Cares
         </Link>
