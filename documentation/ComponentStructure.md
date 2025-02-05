@@ -6,7 +6,7 @@ This document explains the standard folder structure for React components in the
 
 ## 📂 Folder Structure
 
-Each component should be placed inside its own folder under `src/components/`, following this pattern:
+Each component should be placed inside its own folder under `nextjs/components/`, following this pattern:
 
 - 📂 ExampleComponent/
   - 📂 SubComponent
@@ -22,9 +22,20 @@ Each component should be placed inside its own folder under `src/components/`, f
 - | `ExampleComponent.types.ts` | TypeScript interfaces and types for the component props. |
 - | `ExampleComponent.styles.ts` | Tailwind-based styles using `clsx` to keep JSX clean. |
 - | `SubComponent` | In case there is a sub component only needed for the parent, put it inside the parents folder |
-  
+
 ---
 
 ## 🎨 **Tailwind Styling with `clsx`**
 
 To maintain a **clean JSX structure**, all Tailwind class names are stored in `ExampleComponent.styles.ts` using `clsx`.
+
+# 📁 Page Folder Structure (NetStrike)
+
+We can follow the same structure for pages as well. Each page should be placed inside its own folder under `nextjs/app/`, following this pattern:
+
+In case there is a sub component only needed for the specific page, put it inside the parents folder
+
+- 📂 ExampleComponent/
+  - 📂 SubComponent
+  - 📄 page.ts
+  - 📄 page.styles.tsx
