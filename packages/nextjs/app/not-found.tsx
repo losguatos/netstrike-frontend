@@ -9,7 +9,7 @@ export default function NotFound() {
         <span className={styles.titleText}>: Not Found</span>
       </div>
       <p className={styles.subtitle}>
-        Congratulations! You've successfully navigated to nowhere. This page is either missing, classified, or hiding from you specifically. :(
+        Congratulations! You have successfully navigated to nowhere. This page is either missing, classified, or hiding from you specifically. :(
       </p>
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>What Happens Next?</h2>
