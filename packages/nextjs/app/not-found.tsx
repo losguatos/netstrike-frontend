@@ -6,7 +6,7 @@ export default function NotFound() {
     <div className={styles.container}>
       <div className={styles.title}>
         <span className={styles.title404}>404</span>
-        <span className={styles.titleText}>:Not Found</span>
+        <span className={styles.titleText}>: Not Found</span>
       </div>
       <p className={styles.subtitle}>
         Congratulations! You've successfully navigated to nowhere. This page is either missing, classified, or hiding from you specifically. :(
