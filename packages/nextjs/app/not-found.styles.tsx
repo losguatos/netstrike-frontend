@@ -9,7 +9,7 @@ const styles = {
   list: 'list-none space-y-2 text-sm md:text-base',
   footerText: 'text-sm md:text-lg mb-6',
   ctaContainer: 'flex items-center justify-center bg-green-600 rounded px-4 py-4', //Fondo verde con hover negro
-  cta: 'text-green-400 font-bold mx-4 cursor-pointer hover:text-black transition-colors duration-300', //Texto verde con hover consistente
+  cta: 'font-bold mx-4 cursor-pointer hover:text-black transition-colors duration-300', //Texto verde con hover consistente
   separator: 'text-green-400 mx-2',
 };
 
