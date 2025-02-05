@@ -33,6 +33,8 @@ To maintain a **clean JSX structure**, all Tailwind class names are stored in `E
 
 We can follow the same structure for pages as well. Each page should be placed inside its own folder under `nextjs/app/`, following this pattern:
 
+In case there is a sub component only needed for the specific page, put it inside the parents folder
+
 - 📂 ExampleComponent/
   - 📂 SubComponent
   - 📄 page.ts
