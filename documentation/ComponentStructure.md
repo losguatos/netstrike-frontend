@@ -8,21 +8,21 @@ This document explains the standard folder structure for React components in the
 
 Each component should be placed inside its own folder under `src/components/`, following this pattern:
 
-📂 ExampleComponent/
---- 📂 SubComponent
---- 📄 index.ts
---- 📄 ExampleComponent.tsx
---- 📄 ExampleComponent.types.ts
---- 📄 ExampleComponent.styles.ts
+- 📂 ExampleComponent/
+  - 📂 SubComponent
+  - 📄 index.ts
+  - 📄 ExampleComponent.tsx
+  - 📄 ExampleComponent.types.ts
+  - 📄 ExampleComponent.styles.ts
 
 ### 📜 **File Explanations**
 
-| `index.ts` | Barrel file to re-export the component for cleaner imports. |
-| `ExampleComponent.tsx` | The main React component file. |
-| `ExampleComponent.types.ts` | TypeScript interfaces and types for the component props. |
-| `ExampleComponent.styles.ts` | Tailwind-based styles using `clsx` to keep JSX clean. |
-| `SubComponent` | In case there is a sub component only needed for the parent, put it inside the parents folder |
-
+- | `index.ts` | Barrel file to re-export the component for cleaner imports. |
+- | `ExampleComponent.tsx` | The main React component file. |
+- | `ExampleComponent.types.ts` | TypeScript interfaces and types for the component props. |
+- | `ExampleComponent.styles.ts` | Tailwind-based styles using `clsx` to keep JSX clean. |
+- | `SubComponent` | In case there is a sub component only needed for the parent, put it inside the parents folder |
+  
 ---
 
 ## 🎨 **Tailwind Styling with `clsx`**
