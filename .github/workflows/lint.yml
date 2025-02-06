@@ -2,7 +2,6 @@ name: "Lint Check"
 
 on:
   pull_request:
-    types: [opened, ready_for_review]
 
 permissions:
   contents: read
@@ -16,7 +15,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
+
+      - name: Engine Versions
+        run: |
+          echo "Node Version:" && node --version
+          echo "Yarn Version:" && yarn --version
 
       - name: Install dependencies
         run: yarn install
