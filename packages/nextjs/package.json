@@ -23,7 +23,7 @@
     "@scaffold-stark/stark-burner": "0.1.8",
     "@starknet-io/types-js": "^0.7.7",
     "@starknet-react/chains": "^3.1.0",
-    "@starknet-react/core": "^3.6.0",
+    "@starknet-react/core": "3.7.2",
     "@starknet-react/typescript-config": "0.0.0",
     "abi-wan-kanabi": "^2.2.2",
     "blo": "^1.1.1",
