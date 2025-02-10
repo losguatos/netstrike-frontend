@@ -1,3 +1,4 @@
+import { CustomConnectButton } from "~~/components/Scaffold-stark/CustomConnectButton";
 import { styles } from "./page.styles";
 import { Button } from "~~/components/ButtonComponent";
 
@@ -12,10 +13,10 @@ export default function page() {
           </span>
           <h2 className={styles.heading}>Secure Terminal Login</h2>
         </div>
-        <Button />
+        <CustomConnectButton />
       </div>
 
-      <p className={styles.Ptext}>
+      <p className={styles.disclaimer}>
         Access to this terminal is restricted under the Secure Operations Act.
         Unauthorized access will trigger security protocols, including but not
         limited to system lockdowns, excessive audit logs, and a
