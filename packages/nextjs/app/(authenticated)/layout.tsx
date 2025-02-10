@@ -6,13 +6,6 @@ import { useReadLocalStorage } from "usehooks-ts";
 import scaffoldConfig from "~~/scaffold.config";
 import { burnerAccounts, BurnerConnector } from "@scaffold-stark/stark-burner";
 
-enum AccountStatus {
-  Connected = "connected",
-  Disconnected = "disconnected",
-  Connecting = "connecting",
-  Reconnecting = "reconnecting",
-}
-
 const AuthenticatedLayout = ({ children }: { children: React.ReactNode }) => {
   const { account, status } = useAccount();
   const {
