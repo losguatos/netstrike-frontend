@@ -51,7 +51,7 @@ export const Wallet = ({
           src={icon}
           width={70}
           height={70}
-          className="h-full w-full object-cover rounded-[5px]"
+          className="h-full imageRenderingPixelated w-full object-cover rounded-[5px]"
         />
       </div>
       <span className=" text-start m-0">{connector.name}</span>

@@ -5,6 +5,7 @@ import { useAccount, useConnect } from "@starknet-react/core";
 import { useReadLocalStorage } from "usehooks-ts";
 import scaffoldConfig from "~~/scaffold.config";
 import { burnerAccounts, BurnerConnector } from "@scaffold-stark/stark-burner";
+import LoadingOverlay from "~~/components/LoadingOverlay/LoadingOverlay";
 
 const AuthenticatedLayout = ({ children }: { children: React.ReactNode }) => {
   const { account, status } = useAccount();
@@ -45,15 +46,13 @@ const AuthenticatedLayout = ({ children }: { children: React.ReactNode }) => {
   if (!account && isIdle) {
     autoConnect();
   } else if (!account && isPending) {
-    return null;
+    return <LoadingOverlay />;
   } else if (!account && isSuccess) {
     router.push("/login");
     return null;
   }
 
-  console.log(connectionStatus);
-
-  return null;
+  return <LoadingOverlay />;
 };
 
 export default AuthenticatedLayout;
