@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { generateRandomLoadingLines } from "./LoadingOverlay.utils";
 import { classes } from "./LoadingOverlay.styles";
+import { useProgress } from "~~/hooks/useProgress";
 
 const linesToRender = generateRandomLoadingLines();
 
 const LoadingOverlay = () => {
   const [textIndex, setTextIndex] = useState(0);
 
-  const [progress1, setProgress1] = useState(0);
-  const [progress2, setProgress2] = useState(0);
-  const [progress3, setProgress3] = useState(0);
-
-  const [isReady1, setIsReady1] = useState(false);
-  const [isReady2, setIsReady2] = useState(false);
-  const [isReady3, setIsReady3] = useState(false);
+  const { progress: progress1, isReady: isReady1 } = useProgress();
+  const { progress: progress2, isReady: isReady2 } = useProgress();
+  const { progress: progress3, isReady: isReady3 } = useProgress();
 
   useEffect(() => {
     if (textIndex < lines.length) {
@@ -28,74 +25,6 @@ const LoadingOverlay = () => {
     const filledBlocks = Math.floor((percentage / 100) * totalBlocks);
     return "█".repeat(filledBlocks) + "░".repeat(totalBlocks - filledBlocks);
   };
-
-  const handleAdvanceProgress = (
-    interval: NodeJS.Timeout,
-    setProgress: React.Dispatch<React.SetStateAction<number>>,
-    setIsReady: React.Dispatch<React.SetStateAction<boolean>>,
-    progress: number,
-  ) => {
-    setProgress((prev) => {
-      const newValue = prev + progress;
-      if (newValue >= 100) {
-        clearInterval(interval);
-        setIsReady(true);
-        return 100;
-      }
-      return newValue;
-    });
-  };
-
-  useEffect(() => {
-    if (progress1 < 100) {
-      const randomProgress = Math.floor(Math.random() * 10) + 1;
-      const timer1 = setInterval(
-        () =>
-          handleAdvanceProgress(
-            timer1,
-            setProgress1,
-            setIsReady1,
-            randomProgress,
-          ),
-        200,
-      );
-      return () => clearInterval(timer1);
-    }
-  }, [progress1]);
-
-  useEffect(() => {
-    if (progress2 < 100) {
-      const randomProgress = Math.floor(Math.random() * 10) + 1;
-      const timer2 = setInterval(
-        () =>
-          handleAdvanceProgress(
-            timer2,
-            setProgress2,
-            setIsReady2,
-            randomProgress,
-          ),
-        200,
-      );
-      return () => clearInterval(timer2);
-    }
-  }, [progress2]);
-
-  useEffect(() => {
-    if (progress3 < 100) {
-      const randomProgress = Math.floor(Math.random() * 10) + 1;
-      const timer3 = setInterval(
-        () =>
-          handleAdvanceProgress(
-            timer3,
-            setProgress3,
-            setIsReady3,
-            randomProgress,
-          ),
-        200,
-      );
-      return () => clearInterval(timer3);
-    }
-  }, [progress3]);
 
   const lines = [
     linesToRender[0],
