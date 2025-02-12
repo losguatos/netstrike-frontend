@@ -17,7 +17,6 @@ const LoadingOverlay = () => {
       const timer = setTimeout(() => setTextIndex(textIndex + 1), 150);
       return () => clearTimeout(timer);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textIndex]);
 
   const generateProgressBar = (percentage: number) => {
