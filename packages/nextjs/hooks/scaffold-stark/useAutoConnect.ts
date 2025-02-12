@@ -19,7 +19,6 @@ export const useAutoConnect = () => {
   );
 
   const connect = useConnect();
-  console.log(connect);
   useEffect(() => {
     if (scaffoldConfig.walletAutoConnect) {
       const connector = connect.connectors.find(
