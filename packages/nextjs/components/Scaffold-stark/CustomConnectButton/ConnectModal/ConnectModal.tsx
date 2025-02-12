@@ -65,13 +65,18 @@ export const ConnectModal = () => {
   }
 
   return (
-    <div>
+    <div className="w-full " >
       <label
         htmlFor="connect-modal"
-        className="btn-sm font-bold px-8  border-2 border-primary hover:bg-primary hover:text-black text-primary text-lg py-3 cursor-pointer"
+        className="block textShadowAnimation border-4 border-primary
+    border-dashed [border-top-style:solid]
+    [border-bottom-style:solid]
+    text-5xl font-medium max-w-[504px] w-full py-4
+    hover:bg-primary hover:text-[#000000]  cursor-pointer     "
       >
-        <span>Connect</span>
+        <span>Connet</span>
       </label>
+      
 
       <input
         ref={modalRef}
@@ -82,13 +87,13 @@ export const ConnectModal = () => {
       <GenericModal modalId="connect-modal">
         <>
           <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold">
+            <h3 className="text-xl font-bold text-[#24DC8F] ">
               {isBurnerWallet ? "Choose account" : "Connect a Wallet"}
             </h3>
             <label
               onClick={() => setIsBurnerWallet(false)}
               htmlFor="connect-modal"
-              className="btn btn-ghost btn-sm btn-circle cursor-pointer"
+              className="btn btn-ghost text-[#24DC8F] btn-sm btn-circle cursor-pointer"
             >
               ✕
             </label>
