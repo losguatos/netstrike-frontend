@@ -16,6 +16,5 @@ export const useNativeCurrencyPrice = () => {
     return () => {
       priceService.stopPolling(id);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };

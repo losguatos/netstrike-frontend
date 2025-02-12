@@ -1,6 +1,5 @@
 import { CustomConnectButton } from "~~/components/Scaffold-stark/CustomConnectButton";
 import { styles } from "./page.styles";
-import { Button } from "~~/components/ButtonComponent";
 
 export default function page() {
   return (
