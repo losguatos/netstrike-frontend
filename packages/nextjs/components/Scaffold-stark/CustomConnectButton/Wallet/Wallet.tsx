@@ -3,6 +3,7 @@ import { Connector } from "@starknet-react/core";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
+
 export const Wallet = ({
   handleConnectWallet,
   connector,
@@ -19,6 +20,8 @@ export const Wallet = ({
   const [isMounted, setIsMounted] = useState(false);
   const { resolvedTheme } = useTheme();
   const isDarkMode = resolvedTheme === "dark";
+
+  
 
   // connector has two : dark and light icon
   const icon = useMemo(() => {
