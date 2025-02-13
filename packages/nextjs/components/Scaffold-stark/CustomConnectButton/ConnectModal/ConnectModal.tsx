@@ -74,7 +74,7 @@ export const ConnectModal = () => {
     text-5xl font-medium max-w-[504px] w-full py-4
     hover:bg-primary hover:text-[#000000]  cursor-pointer     "
       >
-        <span>Connet</span>
+        <span>Connect</span>
       </label>
       
 
@@ -85,9 +85,9 @@ export const ConnectModal = () => {
         className="modal-toggle"
       />
       <GenericModal modalId="connect-modal">
-        <>
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#24DC8F] ">
+        
+          <div className="flex items-center justify-between border border-[#24dc8f] w-full py-1 px-4  ">
+            <h3 className="text-xl font-bold text-[#24DC8F] m-0 mx-1 ">
               {isBurnerWallet ? "Choose account" : "Connect a Wallet"}
             </h3>
             <label
@@ -99,7 +99,7 @@ export const ConnectModal = () => {
             </label>
           </div>
           <div className="flex flex-col flex-1 lg:grid">
-            <div className="flex flex-col gap-4 w-full px-8 py-10">
+            <div className="flex flex-col gap-3 w-full px-3 py-0 ">
               {!isBurnerWallet ? (
                 connectors.map((connector, index) => (
                   <Wallet
@@ -139,7 +139,10 @@ export const ConnectModal = () => {
               )}
             </div>
           </div>
-        </>
+       
+        <div className="bg-[#24DC8F] text-[#000000] max-h-[65px] p-0 text-lg text-center " >
+          <p>Select a wallet and confirm</p>
+        </div>
       </GenericModal>
     </div>
   );
