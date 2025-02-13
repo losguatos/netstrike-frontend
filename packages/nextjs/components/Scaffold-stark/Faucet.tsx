@@ -63,7 +63,6 @@ export const Faucet = () => {
       }
     };
     checkChain().then();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const sendETH = async () => {

@@ -70,7 +70,6 @@ export const FaucetSepolia = () => {
       }
     };
     checkChain().then();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const { resolvedTheme } = useTheme();

@@ -4,7 +4,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Balance } from "../Balance";
 
-import { useAutoConnect, useNetworkColor } from "~~/hooks/scaffold-stark";
+import { useNetworkColor } from "~~/hooks/scaffold-stark";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
 import { useAccount, useNetwork } from "@starknet-react/core";
@@ -13,6 +13,7 @@ import { WrongNetworkDropdown } from "./WrongNetworkDropdown";
 import { ConnectModal } from "./ConnectModal";
 import { AddressInfoDropdown } from "./AddressInfoDropdown";
 import { AddressQRCodeModal } from "./AddressQRCodeModal";
+import { useAutoConnect } from "~~/hooks/useAutoConnect";
 
 /**
  * Custom Connect Button (watch balance + custom design)
