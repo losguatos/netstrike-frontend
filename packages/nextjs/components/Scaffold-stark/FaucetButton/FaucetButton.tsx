@@ -7,6 +7,7 @@ import { Address, devnet } from "@starknet-react/chains";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import useScaffoldEthBalance from "~~/hooks/scaffold-stark/useScaffoldEthBalance";
 import { useAccount } from "~~/hooks/useAccount";
+import { FaucetButtonStyles } from "./FaucetButtonStyles";
 
 // Number of ETH faucet sends to an address
 const NUM_OF_ETH = "1";
@@ -54,12 +55,12 @@ export const FaucetButton = () => {
       data-tip="Grab funds from faucet"
     >
       <button
-        className="btn btn-secondary btn-sm px-2 rounded-full"
+        className={FaucetButtonStyles.button}
         onClick={sendETH}
         disabled={loading}
       >
         {!loading ? (
-          <BanknotesIcon className="h-4 w-4" />
+          <BanknotesIcon className={FaucetButtonStyles.BanknotesIcon} />
         ) : (
           <span className="loading loading-spinner loading-xs"></span>
         )}

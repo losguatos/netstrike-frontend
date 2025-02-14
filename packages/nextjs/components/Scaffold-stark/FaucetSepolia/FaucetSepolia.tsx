@@ -6,8 +6,9 @@ import { BanknotesIcon } from "@heroicons/react/24/outline";
 import { useNetwork, useProvider } from "@starknet-react/core";
 import { notification } from "~~/utils/scaffold-stark";
 import Image from "next/image";
-import { GenericModal } from "./CustomConnectButton/GenericModal";
+import { GenericModal } from "../CustomConnectButton/GenericModal";
 import { useTheme } from "next-themes";
+import { FaucetSepoliaStyles } from "./FaucetSepoliaStyles";
 
 /**
  * Faucet modal which displays external websites that lets you send small amounts of L2 Sepolia ETH/STRK to an account address on Starknet Sepolia..
@@ -42,23 +43,23 @@ export const FaucetSepolia = () => {
         console.error("⚡️ ~ file: Faucet.tsx:checkChain ~ error", error);
         notification.error(
           <>
-            <p className="font-bold mt-0 mb-1">
+            <p className={FaucetSepoliaStyles.p1}>
               Cannot connect to local provider
             </p>
             <p className="m-0">
               - Did you forget to run{" "}
-              <code className="italic bg-base-300 text-base font-bold">
+              <code className={FaucetSepoliaStyles.code1}>
                 yarn chain
               </code>{" "}
               ?
             </p>
-            <p className="mt-1 break-normal">
+            <p className={FaucetSepoliaStyles.p2}>
               - Or you can change{" "}
-              <code className="italic bg-base-300 text-base font-bold">
+              <code className={FaucetSepoliaStyles.code2}>
                 targetNetwork
               </code>{" "}
               in{" "}
-              <code className="italic bg-base-300 text-base font-bold">
+              <code className={FaucetSepoliaStyles.code2}>
                 scaffold.config.ts
               </code>
             </p>
@@ -84,16 +85,16 @@ export const FaucetSepolia = () => {
     <div>
       <label
         htmlFor="faucet-modal"
-        className="btn btn-sm font-normal gap-1 border border-[#32BAC4] shadow-none"
+        className={FaucetSepoliaStyles.labelOne}
       >
-        <BanknotesIcon className="h-4 w-4 text-[#32BAC4]" />
+        <BanknotesIcon className={FaucetSepoliaStyles.bankNotes} />
         <span>Faucet</span>
       </label>
       <input type="checkbox" id="faucet-modal" className="modal-toggle" />
       <GenericModal modalId="faucet-modal">
         <>
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold mb-3">Sepolia Faucets</h3>
+          <div className={FaucetSepoliaStyles.divOne}>
+            <h3 className={FaucetSepoliaStyles.heading3}>Sepolia Faucets</h3>
             <label
               htmlFor="faucet-modal"
               className="btn btn-ghost btn-sm btn-circle"
@@ -101,25 +102,25 @@ export const FaucetSepolia = () => {
               ✕
             </label>
           </div>
-          <p className="text-xs mb-6">
+          <p className={FaucetSepoliaStyles.p3}>
             <span className="font-medium underline">Disclaimer:</span>
             <br /> Please note that these external websites are provided for
             your convenience. We do not have control over the content and
             availability of these sites. Use at your own risk.
           </p>
           <div className="mb-4">
-            <div className="flex flex-col space-y-3">
+            <div className={FaucetSepoliaStyles.divTwo}>
               {sepoliaFaucets.length &&
                 sepoliaFaucets.map((faucet, id) => (
                   <a
                     href={faucet.link}
                     target="_blank"
-                    className={`h-12 flex items-center btn-sm px-6 gap-4 rounded-[4px] transition-all modal-border ${
+                    className={` ${FaucetSepoliaStyles.a} ${
                       isDarkMode ? "hover:bg-[#385183]" : "hover:bg-slate-200"
                     } border `}
                     key={id}
                   >
-                    <div className="flex relative w-6 h-6">
+                    <div className={FaucetSepoliaStyles.divThree}>
                       <Image
                         alt="Starknet Developers Hub"
                         className="cursor-pointer"
@@ -128,7 +129,7 @@ export const FaucetSepolia = () => {
                         src={faucet.img}
                       />
                     </div>
-                    <span className="text-sm m-0">{faucet.name}</span>
+                    <span className={FaucetSepoliaStyles.span}>{faucet.name}</span>
                   </a>
                 ))}
             </div>

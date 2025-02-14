@@ -1,8 +1,8 @@
 import { useTheme } from "next-themes";
+import { GenericModalStyles } from "./GenericModalStyles";
 
 export const GenericModal = ({
   children,
-  className = "modal-box modal-border bg-modal  rounded-[8px] border flex flex-col gap-3 justify-around relative",
   modalId,
 }: {
   children: React.ReactNode;
@@ -13,9 +13,9 @@ export const GenericModal = ({
   const isDarkMode = resolvedTheme === "dark";
   return (
     <label htmlFor={modalId} className="modal  backdrop-blur cursor-pointer">
-      <label className={className}>
+      <label className={GenericModalStyles.GenericM}>
         {/* dummy input to capture event onclick on modal box */}
-        <input className="h-0 w-0 absolute top-0 left-0" />
+        <input className={GenericModalStyles.GenericInput} />
         {children}
       </label>
     </label>

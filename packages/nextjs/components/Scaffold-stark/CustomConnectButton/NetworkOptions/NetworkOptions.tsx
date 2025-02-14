@@ -5,6 +5,7 @@ import { getTargetNetworks } from "~~/utils/scaffold-stark";
 import { useAccount, useSwitchChain } from "@starknet-react/core";
 import { useEffect, useMemo } from "react";
 import { constants } from "starknet";
+import { NetworkOptionsStyles } from "./NetworkOptionsStyles";
 
 type NetworkOptionsProps = {
   hidden?: boolean;
@@ -36,7 +37,7 @@ export const NetworkOptions = ({ hidden = false }: NetworkOptionsProps) => {
         .map((allowedNetwork) => (
           <li key={allowedNetwork.network} className={hidden ? "hidden" : ""}>
             <button
-              className="menu-item btn-sm !rounded-xl flex gap-3 py-3 whitespace-nowrap"
+              className={NetworkOptionsStyles.button}
               type="button"
               onClick={() =>
                 switchChain({
@@ -44,7 +45,7 @@ export const NetworkOptions = ({ hidden = false }: NetworkOptionsProps) => {
                 })
               }
             >
-              <ArrowsRightLeftIcon className="h-6 w-4 ml-2 sm:ml-0" />
+              <ArrowsRightLeftIcon className={NetworkOptionsStyles.Arrow} />
               <span>
                 Switch to{" "}
                 <span

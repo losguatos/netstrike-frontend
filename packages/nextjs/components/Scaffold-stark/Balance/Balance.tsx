@@ -6,6 +6,7 @@ import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import useScaffoldEthBalance from "~~/hooks/scaffold-stark/useScaffoldEthBalance";
 import { useGlobalState } from "~~/services/store/store";
 import useScaffoldStrkBalance from "~~/hooks/scaffold-stark/useScaffoldStrkBalance";
+import { BalanceStyles } from "./BalanceStyles";
 
 type BalanceProps = {
   address?: Address;
@@ -49,10 +50,10 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
     strkFormatted === null
   ) {
     return (
-      <div className="animate-pulse flex space-x-4">
-        <div className="rounded-md bg-slate-300 h-6 w-6"></div>
-        <div className="flex items-center space-y-6">
-          <div className="h-2 w-28 bg-slate-300 rounded"></div>
+      <div className={BalanceStyles.divOne}>
+        <div className= {BalanceStyles.divTwo}></div>
+        <div className={BalanceStyles.divThree}>
+          <div className={BalanceStyles.divFour}></div>
         </div>
       </div>
     );
@@ -61,7 +62,7 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
   if (isError) {
     return (
       <div
-        className={`border-2 border-gray-400 rounded-md px-2 flex flex-col items-center max-w-fit cursor-pointer`}
+        className={BalanceStyles.divFive}
       >
         <div className="text-warning">Error</div>
       </div>
@@ -76,13 +77,13 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
   return (
     <>
       <button
-        className={` btn btn-sm btn-ghost flex flex-col font-normal items-center hover:bg-transparent ${className}`}
+        className={` ${BalanceStyles.button}  ${className}`}
         onClick={toggleBalanceMode}
       >
-        <div className="w-full flex items-center justify-center">
+        <div className={BalanceStyles.divSix}>
           {displayUsdMode ? (
             <div className="flex">
-              <span className="text-[0.8em] font-bold mr-1">$</span>
+              <span className={BalanceStyles.spanOne}>$</span>
               <span>
                 {totalBalanceInUsd.toLocaleString("en-US", {
                   minimumFractionDigits: 2,
@@ -92,17 +93,17 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
             </div>
           ) : (
             <>
-              <div className="flex flex-col sm:flex-row sm:gap-4">
+              <div className={BalanceStyles.divSeven}>
                 <div className="flex">
                   <span>{parseFloat(formatted).toFixed(4)}</span>
-                  <span className="text-[0.8em] font-bold ml-1">
+                  <span  className={BalanceStyles.span}>
                     {targetNetwork.nativeCurrency.symbol}
                   </span>
                 </div>
 
                 <div className="flex">
                   <span>{parseFloat(strkFormatted).toFixed(4)}</span>
-                  <span className="text-[0.8em] font-bold ml-1">
+                  <span className={BalanceStyles.span}>
                     {strkSymbol}
                   </span>
                 </div>

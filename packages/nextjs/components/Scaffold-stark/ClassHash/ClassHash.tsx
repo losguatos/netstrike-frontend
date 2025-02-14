@@ -11,6 +11,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { getBlockExplorerClasshashLink } from "~~/utils/scaffold-stark";
+import { ClashHashStyles } from "./ClassHashStyles";
 
 type ClasshashProps = {
   classHash: AddressType;
@@ -41,7 +42,7 @@ export const ClassHash = ({
   }
 
   return (
-    <div className="flex items-center">
+    <div className={ClashHashStyles.parentDiv}>
       <div className="flex-shrink-0">
         <span className={`text-${size} font-normal`}>class hash: </span>
       </div>
@@ -61,7 +62,7 @@ export const ClassHash = ({
       )}
       {addressCopied ? (
         <CheckCircleIcon
-          className="ml-1.5 text-xl font-normal text-sky-600 h-5 w-5 cursor-pointer"
+          className={ClashHashStyles.checkCircleIcon}
           aria-hidden="true"
         />
       ) : (
@@ -76,7 +77,7 @@ export const ClassHash = ({
           }}
         >
           <DocumentDuplicateIcon
-            className="ml-1.5 text-xl font-normal text-sky-600 h-5 w-5 cursor-pointer"
+            className={ClashHashStyles.duplicateIcon}
             aria-hidden="true"
           />
         </CopyToClipboard>

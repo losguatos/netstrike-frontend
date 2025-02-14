@@ -23,6 +23,7 @@ import { useScaffoldStarkProfile } from "~~/hooks/scaffold-stark/useScaffoldStar
 import { useTheme } from "next-themes";
 import { default as NextImage } from "next/image";
 import { NetworkOptions } from "../NetworkOptions";
+import { AddressInfoDropdownStyles } from "./AddressInfoDropdownStyles";
 
 const allowedNetworks = getTargetNetworks();
 
@@ -80,12 +81,12 @@ export const AddressInfoDropdown = ({
 
   return (
     <>
-      <details ref={dropdownRef} className="dropdown dropdown-end leading-3">
+      <details ref={dropdownRef} className={AddressInfoDropdownStyles.details}>
         <summary
           tabIndex={0}
-          className="btn bg-transparent btn-sm px-2 py-[0.35rem] dropdown-toggle gap-0 !h-auto border border-[#5c4fe5] "
+          className={AddressInfoDropdownStyles.summary}
         >
-          <div className="hidden [@media(min-width:412px)]:block">
+          <div className={AddressInfoDropdownStyles.divOne}>
             {getStarknetPFPIfExists(profile?.profilePicture) ? (
               <NextImage
                 src={profile?.profilePicture || ""}
@@ -98,24 +99,24 @@ export const AddressInfoDropdown = ({
               <BlockieAvatar address={address} size={28} ensImage={ensAvatar} />
             )}
           </div>
-          <span className="ml-2 mr-2 text-sm">
+          <span className={AddressInfoDropdownStyles.spanOne}>
             {isENS(displayName)
               ? displayName
               : profile?.name ||
                 address?.slice(0, 6) + "..." + address?.slice(-4)}
           </span>
-          <ChevronDownIcon className="h-6 w-4 ml-2 sm:ml-0 sm:block hidden" />
+          <ChevronDownIcon className={AddressInfoDropdownStyles.chevronDownIcon} />
         </summary>
         <ul
           tabIndex={0}
-          className={`dropdown-content menu z-[2] p-2 mt-2 rounded-[5px] gap-1 border border-[#5c4fe5] bg-base-100`}
+          className={AddressInfoDropdownStyles.ul}
         >
           <NetworkOptions hidden={!selectingNetwork} />
           <li className={selectingNetwork ? "hidden" : ""}>
             {addressCopied ? (
-              <div className="btn-sm !rounded-xl flex gap-3 py-3">
+              <div className={AddressInfoDropdownStyles.divTwo}>
                 <CheckCircleIcon
-                  className="text-xl font-normal h-6 w-4 cursor-pointer ml-2 sm:ml-0"
+                  className={AddressInfoDropdownStyles.checkCircleIcon}
                   aria-hidden="true"
                 />
                 <span className=" whitespace-nowrap">Copy address</span>
@@ -131,9 +132,9 @@ export const AddressInfoDropdown = ({
                   }, 800);
                 }}
               >
-                <div className="btn-sm !rounded-xl flex gap-3 py-3">
+                <div className={AddressInfoDropdownStyles.divThree}>
                   <DocumentDuplicateIcon
-                    className="text-xl font-normal h-6 w-4 cursor-pointer ml-2 sm:ml-0"
+                    className={AddressInfoDropdownStyles.duplicateIcon}
                     aria-hidden="true"
                   />
                   <span className=" whitespace-nowrap">Copy address</span>
@@ -144,19 +145,19 @@ export const AddressInfoDropdown = ({
           <li className={selectingNetwork ? "hidden" : ""}>
             <label
               htmlFor="qrcode-modal"
-              className="btn-sm !rounded-xl flex gap-3 py-3"
+              className={AddressInfoDropdownStyles.labelOne}
             >
-              <QrCodeIcon className="h-6 w-4 ml-2 sm:ml-0" />
+              <QrCodeIcon className={AddressInfoDropdownStyles.QrCode} />
               <span className="whitespace-nowrap">View QR Code</span>
             </label>
           </li>
           {chain.network != "devnet" ? (
             <li className={selectingNetwork ? "hidden" : ""}>
               <button
-                className="menu-item btn-sm !rounded-xl flex gap-3 py-3"
+                className={AddressInfoDropdownStyles.buttonOne}
                 type="button"
               >
-                <ArrowTopRightOnSquareIcon className="h-6 w-4 ml-2 sm:ml-0" />
+                <ArrowTopRightOnSquareIcon className={AddressInfoDropdownStyles.arrowIcon} />
                 <a
                   target="_blank"
                   href={blockExplorerAddressLink}
