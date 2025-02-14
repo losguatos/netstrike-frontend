@@ -3300,27 +3300,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@web3icons/common@npm:0.11.6":
-  version: 0.11.6
-  resolution: "@web3icons/common@npm:0.11.6"
-  peerDependencies:
-    typescript: ^5.0.0
-  checksum: cf266ec77ab35452cd1f13e5a271df29245ced216e8b290bc6792beec9245236e64d8829cc9522f31a46271643b232530acc0c8439209706c20c49613b866cf1
-  languageName: node
-  linkType: hard
-
-"@web3icons/react@npm:^4.0.7":
-  version: 4.0.7
-  resolution: "@web3icons/react@npm:4.0.7"
-  dependencies:
-    "@web3icons/common": 0.11.6
-    react: ^18.2.0
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 3649a367942f5e5937781615981b65fe4bb72223e29ac928c324392ba27e8462fc354f03693114ab301ab90bfe4a3743d0a32bba18dd6e5914cc3bf1d5159fee
-  languageName: node
-  linkType: hard
-
 "@webassemblyjs/ast@npm:1.14.1, @webassemblyjs/ast@npm:^1.14.1":
   version: 1.14.1
   resolution: "@webassemblyjs/ast@npm:1.14.1"
@@ -7771,7 +7750,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "netstrike@workspace:."
   dependencies:
-    "@web3icons/react": ^4.0.7
     clsx: ^2.1.1
     daisyui: ^4.7.3
     husky: ^9.0.11
@@ -8779,7 +8757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18, react@npm:^18.2.0":
+"react@npm:^18":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:

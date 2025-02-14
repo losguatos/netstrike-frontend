@@ -35,7 +35,6 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
-    "@web3icons/react": "^4.0.7",
     "clsx": "^2.1.1",
     "postcss": "^8.4.38"
   }
