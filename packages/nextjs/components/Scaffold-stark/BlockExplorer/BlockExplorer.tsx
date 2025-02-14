@@ -61,19 +61,17 @@ export const BlockExplorer = () => {
             ✕
           </label>
         </div>
-        <div className={Blo}>
-          <div className="flex flex-col gap-4">
+        <div className={BlockStyles.divTwo}>
+          <div className={BlockStyles.divThree}>
             {blockExplorers.length &&
               blockExplorers.map((blockexplorer, id) => (
                 <a
                   href={blockexplorer.link}
                   target="_blank"
-                  className={`h-12 flex items-center btn-sm px-6 gap-4 rounded-[4px] transition-all modal-border ${
-                    isDarkMode ? "hover:bg-[#385183]" : "hover:bg-slate-200"
-                  } border `}
+                  className={` ${BlockStyles.a} ${isDarkMode ? BlockStyles.aDarkmode : BlockStyles.aNotDarkmode }`}
                   key={id}
                 >
-                  <div className="flex relative w-6 h-6">
+                  <div className={BlockStyles.divFour}>
                     <Image
                       alt="Starknet Developers Hub"
                       className="cursor-pointer"
@@ -82,7 +80,7 @@ export const BlockExplorer = () => {
                       src={blockexplorer.img}
                     />
                   </div>
-                  <span className="text-sm m-0">{blockexplorer.name}</span>
+                  <span className={BlockStyles.spanOne}>{blockexplorer.name}</span>
                 </a>
               ))}
           </div>

@@ -15,7 +15,7 @@ import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
 import { useScaffoldStarkProfile } from "~~/hooks/scaffold-stark/useScaffoldStarkProfile";
 import { getStarknetPFPIfExists } from "~~/utils/profile";
 import { default as NextImage } from "next/image";
-import { BlockieAvatar } from "../BlockieAvatar";
+import { BlockieAvatar } from "../BlockieAvatar/BlockieAvatar";
 import { AddressStyle } from "./AddressStyle";
 
 type AddressProps = {

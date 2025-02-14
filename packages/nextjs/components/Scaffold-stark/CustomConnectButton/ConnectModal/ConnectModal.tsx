@@ -5,7 +5,7 @@ import { BurnerConnector, burnerAccounts } from "@scaffold-stark/stark-burner";
 import { useTheme } from "next-themes";
 import { LAST_CONNECTED_TIME_LOCALSTORAGE_KEY } from "~~/utils/Constants";
 import { GenericModal } from "../GenericModal";
-import { BlockieAvatar } from "../../BlockieAvatar";
+import { BlockieAvatar } from "../../BlockieAvatar/BlockieAvatar";
 import { Wallet } from "../Wallet";
 import { ConnectModalStyles } from "./ConnectModalStyles";
 
