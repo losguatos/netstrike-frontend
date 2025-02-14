@@ -17,7 +17,6 @@ export const Wallet = ({
   const [clicked, setClicked] = useState(false);
 
   const Icon = useMemo(() => {
-    console.log("connector.id", connector.id);
     return walletsSvg[connector.id as WalletId];
   }, [connector]);
 
