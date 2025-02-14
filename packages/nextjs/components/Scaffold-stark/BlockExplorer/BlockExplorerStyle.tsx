@@ -11,4 +11,4 @@ export const BlockStyles = {
     aNotDarkmode: "hover:bg-slate-200",
     divFour: "flex relative w-6 h-6",
     spanOne: "text-sm m-0",
-    
+}
