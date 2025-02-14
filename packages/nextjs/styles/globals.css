@@ -28,9 +28,7 @@ p {
   margin: 1rem 0;
 }
 
-.btn {
-  @apply shadow-md;
-}
+
 
 html {
   @apply overflow-y-scroll overflow-x-hidden;
@@ -54,9 +52,6 @@ body {
   @apply fixed inset-0 overflow-hidden;
 }
 
-.btn.btn-ghost {
-  @apply shadow-none;
-}
 
 .circle-gradient {
   border-radius: 630px;

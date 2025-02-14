@@ -3,33 +3,34 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import { useDisconnect } from "@starknet-react/core";
+import { WrongNetworkDropdownStyles } from "./WrongNetworkDropdownStyles";
 
 export const WrongNetworkDropdown = () => {
   const { disconnect } = useDisconnect();
 
   return (
-    <div className="dropdown dropdown-end mr-2">
+    <div className={WrongNetworkDropdownStyles.parentDiv}>
       <label
         tabIndex={0}
-        className="btn btn-error btn-sm dropdown-toggle gap-1"
+        className={WrongNetworkDropdownStyles.label}
       >
         <span>Wrong network</span>
-        <ChevronDownIcon className="h-6 w-4 ml-2 sm:ml-0" />
+        <ChevronDownIcon className={WrongNetworkDropdownStyles.chevronDownIcon} />
       </label>
 
       <ul
         tabIndex={0}
-        className="dropdown-content menu p-2 mt-1 shadow-center shadow-accent bg-base-200 rounded-box gap-1"
+        className={WrongNetworkDropdownStyles.ul}
       >
         {/* TODO: reinstate if needed */}
         {/* <NetworkOptions /> */}
         <li>
           <button
-            className="menu-item text-error btn-sm !rounded-xl flex gap-3 py-3"
+            className={WrongNetworkDropdownStyles.button}
             type="button"
             onClick={() => disconnect()}
           >
-            <ArrowLeftEndOnRectangleIcon className="h-6 w-4 ml-2 sm:ml-0" />
+            <ArrowLeftEndOnRectangleIcon className={WrongNetworkDropdownStyles.arrowLeftEndOnRectangleIcon} />
             <span>Disconnect</span>
           </button>
         </li>

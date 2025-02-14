@@ -7,6 +7,7 @@ import { LAST_CONNECTED_TIME_LOCALSTORAGE_KEY } from "~~/utils/Constants";
 import { GenericModal } from "../GenericModal";
 import { BlockieAvatar } from "../../BlockieAvatar";
 import { Wallet } from "../Wallet";
+import { ConnectModalStyles } from "./ConnectModalStyles";
 
 const loader = ({ src }: { src: string }) => {
   return src;
@@ -68,11 +69,7 @@ export const ConnectModal = () => {
     <div className="w-full " >
       <label
         htmlFor="connect-modal"
-        className="block textShadowAnimation border-4 border-primary
-    border-dashed [border-top-style:solid]
-    [border-bottom-style:solid]
-    text-5xl font-medium max-w-[504px] w-full py-4
-    hover:bg-primary hover:text-[#000000]  cursor-pointer     "
+        className={ConnectModalStyles.buttonLabel}
       >
         <span>Connect</span>
       </label>
@@ -86,20 +83,20 @@ export const ConnectModal = () => {
       />
       <GenericModal modalId="connect-modal">
         
-          <div className="flex items-center justify-between border border-[#24dc8f] w-full py-1 px-4  ">
-            <h3 className="text-xl font-bold text-[#24DC8F] m-0 mx-1 ">
+          <div className={ConnectModalStyles.headerDiv}>
+            <h3 className={ConnectModalStyles.headerHeading}>
               {isBurnerWallet ? "Choose account" : "Connect a Wallet"}
             </h3>
             <label
               onClick={() => setIsBurnerWallet(false)}
               htmlFor="connect-modal"
-              className="btn btn-ghost text-[#24DC8F] btn-sm btn-circle cursor-pointer"
+              className={ConnectModalStyles.closeIcon}
             >
-              ✕
+              &gt;&lt;
             </label>
           </div>
-          <div className="flex flex-col flex-1 lg:grid">
-            <div className="flex flex-col gap-3 w-full px-3 py-0 ">
+          <div className={ConnectModalStyles.divOne}>
+            <div className={ConnectModalStyles.divTwo}>
               {!isBurnerWallet ? (
                 connectors.map((connector, index) => (
                   <Wallet
@@ -110,17 +107,15 @@ export const ConnectModal = () => {
                   />
                 ))
               ) : (
-                <div className="flex flex-col pb-[20px] justify-end gap-3">
-                  <div className="h-[300px] overflow-y-auto flex w-full flex-col gap-2">
+                <div className={ConnectModalStyles.divThree} >
+                  <div className={ConnectModalStyles.divFour}>
                     {burnerAccounts.map((burnerAcc, ix) => (
                       <div
                         key={burnerAcc.publicKey}
                         className="w-full flex flex-col"
                       >
                         <button
-                          className={`hover:bg-gradient-modal border rounded-md text-neutral py-[8px] pl-[10px] pr-16 flex items-center gap-4 ${
-                            isDarkMode ? "border-[#385183]" : ""
-                          }`}
+                          className={ `${ConnectModalStyles.modalButton} ${isDarkMode ? "border-[#385183]" : ""} ` }
                           onClick={(e) => handleConnectBurner(e, ix)}
                         >
                           <BlockieAvatar
@@ -140,7 +135,7 @@ export const ConnectModal = () => {
             </div>
           </div>
        
-        <div className="bg-[#24DC8F] text-[#000000] max-h-[65px] p-0 text-lg text-center " >
+        <div className={ConnectModalStyles.modalFooter}>
           <p>Select a wallet and confirm</p>
         </div>
       </GenericModal>

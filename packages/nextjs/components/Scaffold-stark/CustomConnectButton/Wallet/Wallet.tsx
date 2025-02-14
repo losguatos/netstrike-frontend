@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Connector } from "@starknet-react/core";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { WalletStyles } from "./WalletStyles";
 
 
 export const Wallet = ({
@@ -37,10 +38,10 @@ export const Wallet = ({
 
   return isMounted ? (
     <button
-      className={`flex gap-4 items-center justify-between text-[#24DC8F]    p-3 py-1 transition-all ${
+      className={` ${WalletStyles.button} ${
         isDarkMode
-          ? "hover:bg-[#385183] border-[#4f4ab7] "
-          : "hover:bg-[#24DC8F] border-none hover:text-[#000000] "
+          ? WalletStyles.buttonDarkmode
+          : WalletStyles.buttonLightMode
       } border ${clicked ? "bg-ligth" : ""}`}
       onClick={(e) => {
         setClicked(true);
@@ -48,15 +49,15 @@ export const Wallet = ({
       }}
     >
       
-      <span className=" text-start m-0">{connector.name}</span>
-      <div className="h-[1.5rem] w-[1.5rem] rounded-[5px]">
+      <span className={WalletStyles.span}>{connector.name}</span>
+      <div className={WalletStyles.div}>
         <Image
           alt={connector.name}
           loader={loader}
           src={icon}
           width={70}
           height={70}
-          className="h-full w-full object-cover rounded-[5px]"
+          className={WalletStyles.imageStyles}
         />
       </div>
     </button>

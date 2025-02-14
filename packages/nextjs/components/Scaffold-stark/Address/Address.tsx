@@ -15,7 +15,8 @@ import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
 import { useScaffoldStarkProfile } from "~~/hooks/scaffold-stark/useScaffoldStarkProfile";
 import { getStarknetPFPIfExists } from "~~/utils/profile";
 import { default as NextImage } from "next/image";
-import { BlockieAvatar } from "./BlockieAvatar";
+import { BlockieAvatar } from "../BlockieAvatar";
+import { AddressStyle } from "./AddressStyle";
 
 type AddressProps = {
   address?: AddressType;
@@ -98,7 +99,7 @@ export const Address = ({
   // Skeleton UI
   if (isLoading) {
     return (
-      <div className="animate-pulse flex space-x-4">
+      <div className={AddressStyle.divOne}>
         <div className="rounded-md bg-slate-300 h-6 w-6"></div>
         <div className="flex items-center space-y-6">
           <div className="h-2 w-28 bg-slate-300 rounded"></div>
