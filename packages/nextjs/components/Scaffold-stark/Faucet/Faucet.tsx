@@ -12,7 +12,8 @@ import {
 import { useNetwork, useProvider } from "@starknet-react/core";
 import { mintEth } from "~~/services/web3/faucet";
 import { notification } from "~~/utils/scaffold-stark";
-import { GenericModal } from "./CustomConnectButton/GenericModal";
+import { GenericModal } from "../CustomConnectButton/GenericModal";
+import { FaucetStyles } from "./FaucetStyles";
 
 /**
  */
@@ -35,23 +36,23 @@ export const Faucet = () => {
         console.error("⚡️ ~ file: Faucet.tsx:checkChain ~ error", error);
         notification.error(
           <>
-            <p className="font-bold mt-0 mb-1">
+            <p className={FaucetStyles.paraOne}>
               Cannot connect to local provider
             </p>
             <p className="m-0">
               - Did you forget to run{" "}
-              <code className="italic bg-base-300 text-base font-bold">
+              <code className={FaucetStyles.codeOne}>
                 yarn chain
               </code>{" "}
               ?
             </p>
             <p className="mt-1 break-normal">
               - Or you can change{" "}
-              <code className="italic bg-base-300 text-base font-bold">
+              <code className={FaucetStyles.codeTwo}>
                 targetNetwork
               </code>{" "}
               in{" "}
-              <code className="italic bg-base-300 text-base font-bold">
+              <code className={FaucetStyles.codeThree}>
                 scaffold.config.ts
               </code>
             </p>
@@ -91,19 +92,19 @@ export const Faucet = () => {
     <div>
       <label
         htmlFor="faucet-modal"
-        className="btn btn-sm font-normal gap-1 border border-[#32BAC4] shadow-none"
+        className={FaucetStyles.labelOne}
       >
-        <BanknotesIcon className="h-4 w-4 text-[#32BAC4]" />
+        <BanknotesIcon className={FaucetStyles.banknotesIcon} />
         <span>Faucet</span>
       </label>
       <input type="checkbox" id="faucet-modal" className="modal-toggle" />
       <GenericModal modalId="faucet-modal">
         <>
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold">Local Faucet</h3>
+          <div className={FaucetStyles.divOne}>
+            <h3 className={FaucetStyles.heading3}>Local Faucet</h3>
             <label
               htmlFor="faucet-modal"
-              className="btn btn-ghost btn-sm btn-circle"
+              className={FaucetStyles.labelTwo}
             >
               ✕
             </label>
@@ -121,7 +122,7 @@ export const Faucet = () => {
             />
           </div>
           <button
-            className="h-10 btn cursor-pointer btn-sm px-2 rounded-[4px] bg-btn-wallet border-[#4f4ab7] border hover:bg-[#385183]"
+            className={FaucetStyles.button}
             onClick={sendETH}
             disabled={loading}
           >
