@@ -100,9 +100,9 @@ export const Address = ({
   if (isLoading) {
     return (
       <div className={AddressStyle.divOne}>
-        <div className="rounded-md bg-slate-300 h-6 w-6"></div>
-        <div className="flex items-center space-y-6">
-          <div className="h-2 w-28 bg-slate-300 rounded"></div>
+        <div className={AddressStyle.divTwo}></div>
+        <div className={AddressStyle.divThree}>
+          <div className={AddressStyle.divFour}></div>
         </div>
       </div>
     );
@@ -110,7 +110,7 @@ export const Address = ({
 
   if (!checkSumAddress) {
     return (
-      <div className="italic text-base font-bold ">Wallet not connected</div>
+      <div className={AddressStyle.divFive}>Wallet not connected</div>
     );
   }
 
@@ -119,7 +119,7 @@ export const Address = ({
   }
 
   return (
-    <div className="flex items-center">
+    <div className={AddressStyle.divSix}>
       <div className="flex-shrink-0">
         {getStarknetPFPIfExists(fetchedProfile?.profilePicture) ? (
           <NextImage
@@ -159,7 +159,7 @@ export const Address = ({
       )}
       {addressCopied ? (
         <CheckCircleIcon
-          className="ml-1.5 text-xl font-normal text-sky-600 h-5 w-5 cursor-pointer"
+          className={AddressStyle.checkCircleIcon}
           aria-hidden="true"
         />
       ) : (
@@ -174,7 +174,7 @@ export const Address = ({
           }}
         >
           <DocumentDuplicateIcon
-            className="ml-1.5 text-xl font-normal text-sky-600 h-5 w-5 cursor-pointer"
+            className={AddressStyle.duplicateIcon}
             aria-hidden="true"
           />
         </CopyToClipboard>

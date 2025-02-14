@@ -4,8 +4,9 @@ import { Address as AddressType, mainnet } from "@starknet-react/chains";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { useNetwork } from "@starknet-react/core";
 import Image from "next/image";
-import { GenericModal } from "./CustomConnectButton/GenericModal";
+import { GenericModal } from "../CustomConnectButton/GenericModal";
 import { useTheme } from "next-themes";
+import { BlockStyles } from "./BlockExplorerStyle";
 
 export const BlockExplorer = () => {
   const { chain: ConnectedChain } = useNetwork();
@@ -40,9 +41,9 @@ export const BlockExplorer = () => {
     <div>
       <label
         htmlFor="blockexplorer-modal"
-        className="btn btn-sm font-normal gap-1 border border-[#32BAC4] shadow-none"
+        className={BlockStyles.labelOne}
       >
-        <MagnifyingGlassIcon className="h-4 w-4 text-[#32BAC4]" />
+        <MagnifyingGlassIcon className={BlockStyles.glassIcon} />
         <span>Block Explorer</span>
       </label>
       <input
@@ -51,16 +52,16 @@ export const BlockExplorer = () => {
         className="modal-toggle"
       />
       <GenericModal modalId="blockexplorer-modal">
-        <div className="flex items-center justify-between">
-          <h3 className="text-xl font-bold">Mainnet Block Explorers</h3>
+        <div className={BlockStyles.divOne}>
+          <h3 className={BlockStyles.heading3}>Mainnet Block Explorers</h3>
           <label
             htmlFor="blockexplorer-modal"
-            className="btn btn-ghost btn-sm btn-circle"
+            className={BlockStyles.labelTwo}
           >
             ✕
           </label>
         </div>
-        <div className="mb-4 mt-6">
+        <div className={Blo}>
           <div className="flex flex-col gap-4">
             {blockExplorers.length &&
               blockExplorers.map((blockexplorer, id) => (
