@@ -2,8 +2,8 @@
 
 // @refresh reset
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Balance } from "../Balance";
-
 import { useNetworkColor } from "~~/hooks/scaffold-stark";
 import { useTargetNetwork } from "~~/hooks/scaffold-stark/useTargetNetwork";
 import { getBlockExplorerAddressLink } from "~~/utils/scaffold-stark";
@@ -23,8 +23,9 @@ export const CustomConnectButton = () => {
   const networkColor = useNetworkColor();
   const { targetNetwork } = useTargetNetwork();
   const { account, status, address: accountAddress } = useAccount();
-  const [accountChainId, setAccountChainId] = useState<bigint>(0n);
   const { chain } = useNetwork();
+  const router = useRouter();
+  const [accountChainId, setAccountChainId] = useState<bigint>(0n);
 
   const blockExplorerAddressLink = useMemo(() => {
     return (
@@ -45,6 +46,12 @@ export const CustomConnectButton = () => {
     }
   }, [account]);
 
+  useEffect(() => {
+    if (status === "connected") {
+      router.push("/home");
+    }
+  }, [status, router]);
+
   if (status === "disconnected") return <ConnectModal />;
 
   if (accountChainId !== targetNetwork.id) {
@@ -54,10 +61,7 @@ export const CustomConnectButton = () => {
   return (
     <>
       <div className="flex flex-col items-center max-sm:mt-2">
-        <Balance
-          address={accountAddress as Address}
-          className="min-h-0 h-auto"
-        />
+        <Balance address={accountAddress as Address} className="min-h-0 h-auto" />
         <span className="text-xs ml-1" style={{ color: networkColor }}>
           {chain.name}
         </span>
