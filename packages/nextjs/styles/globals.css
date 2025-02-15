@@ -28,8 +28,6 @@ p {
   margin: 1rem 0;
 }
 
-
-
 html {
   @apply overflow-y-scroll overflow-x-hidden;
 }
@@ -51,7 +49,6 @@ body {
 .modal.backdrop-blur {
   @apply fixed inset-0 overflow-hidden;
 }
-
 
 .circle-gradient {
   border-radius: 630px;
