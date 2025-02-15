@@ -1,24 +1,14 @@
 "use client"
-import { formatLocalTime, truncateAddress } from "~~/utils/format";
+import { truncateAddress } from "~~/utils/format";
 import { classes } from "./page.styles";
 import { useAccount, useConnect } from "@starknet-react/core";
-import { useEffect, useState } from "react";
+import { useCurrentTime } from "~~/hooks/useCurrentTime";
 
 
 const Home = () => {
   const { address } = useAccount();
   const {connector } = useConnect(); 
-  const [currentTime, setCurrentTime] = useState<string>("");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const now = new Date();
-      const formattedTime = formatLocalTime(now);
-      setCurrentTime(formattedTime);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  const currentTime = useCurrentTime();
   return (
     <div className={classes.container}>
       <div className={classes.header}>
