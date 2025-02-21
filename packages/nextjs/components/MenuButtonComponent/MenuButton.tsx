@@ -9,7 +9,7 @@ interface MenuButtonProps {
   disabled?: boolean;
 }
 
-const MenuButton: React.FC<MenuButtonProps> = ({
+export const MenuButton: React.FC<MenuButtonProps> = ({
   label,
   onClick,
   isActive = false,
@@ -37,5 +37,3 @@ const MenuButton: React.FC<MenuButtonProps> = ({
     </button>
   );
 };
-
-export default MenuButton;
