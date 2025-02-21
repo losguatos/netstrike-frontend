@@ -110,6 +110,12 @@ const config: Config = {
         "gradient-icon":
           "var(--gradient, linear-gradient(90deg, #42D2F1 0%, #B248DD 100%))",
       },
+      colors: {
+        "neon-green": "#39ff14",
+      },
+      fontFamily: {
+        mono: ["Courier New", "monospace"],
+      },
     },
   },
 };
