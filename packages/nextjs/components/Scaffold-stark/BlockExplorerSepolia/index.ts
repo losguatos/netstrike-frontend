@@ -1,1 +1,1 @@
-export* from "./BlockExplorerSepolia"
+export * from "./BlockExplorerSepolia";

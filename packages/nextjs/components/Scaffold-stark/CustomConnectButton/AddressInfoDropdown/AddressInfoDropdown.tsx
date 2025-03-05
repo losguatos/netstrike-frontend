@@ -82,10 +82,7 @@ export const AddressInfoDropdown = ({
   return (
     <>
       <details ref={dropdownRef} className={AddressInfoDropdownStyles.details}>
-        <summary
-          tabIndex={0}
-          className={AddressInfoDropdownStyles.summary}
-        >
+        <summary tabIndex={0} className={AddressInfoDropdownStyles.summary}>
           <div className={AddressInfoDropdownStyles.divOne}>
             {getStarknetPFPIfExists(profile?.profilePicture) ? (
               <NextImage
@@ -105,12 +102,11 @@ export const AddressInfoDropdown = ({
               : profile?.name ||
                 address?.slice(0, 6) + "..." + address?.slice(-4)}
           </span>
-          <ChevronDownIcon className={AddressInfoDropdownStyles.chevronDownIcon} />
+          <ChevronDownIcon
+            className={AddressInfoDropdownStyles.chevronDownIcon}
+          />
         </summary>
-        <ul
-          tabIndex={0}
-          className={AddressInfoDropdownStyles.ul}
-        >
+        <ul tabIndex={0} className={AddressInfoDropdownStyles.ul}>
           <NetworkOptions hidden={!selectingNetwork} />
           <li className={selectingNetwork ? "hidden" : ""}>
             {addressCopied ? (
@@ -157,7 +153,9 @@ export const AddressInfoDropdown = ({
                 className={AddressInfoDropdownStyles.buttonOne}
                 type="button"
               >
-                <ArrowTopRightOnSquareIcon className={AddressInfoDropdownStyles.arrowIcon} />
+                <ArrowTopRightOnSquareIcon
+                  className={AddressInfoDropdownStyles.arrowIcon}
+                />
                 <a
                   target="_blank"
                   href={blockExplorerAddressLink}

@@ -66,14 +66,10 @@ export const ConnectModal = () => {
   }
 
   return (
-    <div className="w-full " >
-      <label
-        htmlFor="connect-modal"
-        className={ConnectModalStyles.buttonLabel}
-      >
+    <div className="w-full ">
+      <label htmlFor="connect-modal" className={ConnectModalStyles.buttonLabel}>
         <span>Connect</span>
       </label>
-      
 
       <input
         ref={modalRef}
@@ -82,59 +78,58 @@ export const ConnectModal = () => {
         className="modal-toggle"
       />
       <GenericModal modalId="connect-modal">
-        
-          <div className={ConnectModalStyles.headerDiv}>
-            <h3 className={ConnectModalStyles.headerHeading}>
-              {isBurnerWallet ? "Choose account" : "Connect a Wallet"}
-            </h3>
-            <label
-              onClick={() => setIsBurnerWallet(false)}
-              htmlFor="connect-modal"
-              className={ConnectModalStyles.closeIcon}
-            >
-              &gt;&lt;
-            </label>
-          </div>
-          <div className={ConnectModalStyles.divOne}>
-            <div className={ConnectModalStyles.divTwo}>
-              {!isBurnerWallet ? (
-                connectors.map((connector, index) => (
-                  <Wallet
-                    key={connector.id || index}
-                    connector={connector}
-                    loader={loader}
-                    handleConnectWallet={handleConnectWallet}
-                  />
-                ))
-              ) : (
-                <div className={ConnectModalStyles.divThree} >
-                  <div className={ConnectModalStyles.divFour}>
-                    {burnerAccounts.map((burnerAcc, ix) => (
-                      <div
-                        key={burnerAcc.publicKey}
-                        className="w-full flex flex-col"
+        <div className={ConnectModalStyles.headerDiv}>
+          <h3 className={ConnectModalStyles.headerHeading}>
+            {isBurnerWallet ? "Choose account" : "Connect a Wallet"}
+          </h3>
+          <label
+            onClick={() => setIsBurnerWallet(false)}
+            htmlFor="connect-modal"
+            className={ConnectModalStyles.closeIcon}
+          >
+            &gt;&lt;
+          </label>
+        </div>
+        <div className={ConnectModalStyles.divOne}>
+          <div className={ConnectModalStyles.divTwo}>
+            {!isBurnerWallet ? (
+              connectors.map((connector, index) => (
+                <Wallet
+                  key={connector.id || index}
+                  connector={connector}
+                  loader={loader}
+                  handleConnectWallet={handleConnectWallet}
+                />
+              ))
+            ) : (
+              <div className={ConnectModalStyles.divThree}>
+                <div className={ConnectModalStyles.divFour}>
+                  {burnerAccounts.map((burnerAcc, ix) => (
+                    <div
+                      key={burnerAcc.publicKey}
+                      className="w-full flex flex-col"
+                    >
+                      <button
+                        className={`${ConnectModalStyles.modalButton} ${isDarkMode ? "border-[#385183]" : ""} `}
+                        onClick={(e) => handleConnectBurner(e, ix)}
                       >
-                        <button
-                          className={ `${ConnectModalStyles.modalButton} ${isDarkMode ? "border-[#385183]" : ""} ` }
-                          onClick={(e) => handleConnectBurner(e, ix)}
-                        >
-                          <BlockieAvatar
-                            address={burnerAcc.accountAddress}
-                            size={35}
-                          />
-                          {`${burnerAcc.accountAddress.slice(
-                            0,
-                            6,
-                          )}...${burnerAcc.accountAddress.slice(-4)}`}
-                        </button>
-                      </div>
-                    ))}
-                  </div>
+                        <BlockieAvatar
+                          address={burnerAcc.accountAddress}
+                          size={35}
+                        />
+                        {`${burnerAcc.accountAddress.slice(
+                          0,
+                          6,
+                        )}...${burnerAcc.accountAddress.slice(-4)}`}
+                      </button>
+                    </div>
+                  ))}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
-       
+        </div>
+
         <div className={ConnectModalStyles.modalFooter}>
           <p>Select a wallet and confirm</p>
         </div>

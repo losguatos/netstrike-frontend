@@ -109,9 +109,7 @@ export const Address = ({
   }
 
   if (!checkSumAddress) {
-    return (
-      <div className={AddressStyle.divFive}>Wallet not connected</div>
-    );
+    return <div className={AddressStyle.divFive}>Wallet not connected</div>;
   }
 
   if (!checkSumAddress) {
