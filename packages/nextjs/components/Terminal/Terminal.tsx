@@ -4,7 +4,7 @@ import { TerminalProps } from "./Terminal.types";
 import { terminalStyles } from "./Terminal.styles";
 import clsx from "clsx";
 
-const Terminal: React.FC<TerminalProps> = ({
+export const Terminal: React.FC<TerminalProps> = ({
   header,
   onClose,
   children,
@@ -21,9 +21,7 @@ const Terminal: React.FC<TerminalProps> = ({
               onClick={onClose}
               aria-label="Close"
               className={terminalStyles.closeButton}
-            >
-              X
-            </button>
+            ></button>
           )}
         </div>
       )}
@@ -32,6 +30,3 @@ const Terminal: React.FC<TerminalProps> = ({
     </div>
   );
 };
-
-// export default Terminal;
-export default React.memo(Terminal);
