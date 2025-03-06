@@ -1,1 +1,1 @@
-export * from "./ClassHash"
+export * from "./ClassHash";

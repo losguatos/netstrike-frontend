@@ -48,16 +48,11 @@ export const FaucetSepolia = () => {
             </p>
             <p className="m-0">
               - Did you forget to run{" "}
-              <code className={FaucetSepoliaStyles.code1}>
-                yarn chain
-              </code>{" "}
-              ?
+              <code className={FaucetSepoliaStyles.code1}>yarn chain</code> ?
             </p>
             <p className={FaucetSepoliaStyles.p2}>
               - Or you can change{" "}
-              <code className={FaucetSepoliaStyles.code2}>
-                targetNetwork
-              </code>{" "}
+              <code className={FaucetSepoliaStyles.code2}>targetNetwork</code>{" "}
               in{" "}
               <code className={FaucetSepoliaStyles.code2}>
                 scaffold.config.ts
@@ -83,10 +78,7 @@ export const FaucetSepolia = () => {
 
   return (
     <div>
-      <label
-        htmlFor="faucet-modal"
-        className={FaucetSepoliaStyles.labelOne}
-      >
+      <label htmlFor="faucet-modal" className={FaucetSepoliaStyles.labelOne}>
         <BanknotesIcon className={FaucetSepoliaStyles.bankNotes} />
         <span>Faucet</span>
       </label>
@@ -129,7 +121,9 @@ export const FaucetSepolia = () => {
                         src={faucet.img}
                       />
                     </div>
-                    <span className={FaucetSepoliaStyles.span}>{faucet.name}</span>
+                    <span className={FaucetSepoliaStyles.span}>
+                      {faucet.name}
+                    </span>
                   </a>
                 ))}
             </div>

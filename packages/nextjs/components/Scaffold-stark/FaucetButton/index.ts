@@ -1,1 +1,1 @@
-export * from  "./FaucetButton"
+export * from "./FaucetButton";

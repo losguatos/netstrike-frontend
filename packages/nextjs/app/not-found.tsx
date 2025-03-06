@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import styles from './not-found.styles';
+import Link from "next/link";
+import styles from "./not-found.styles";
 
 export default function NotFound() {
   return (
@@ -9,12 +9,16 @@ export default function NotFound() {
         <span className={styles.titleText}>: Not Found</span>
       </div>
       <p className={styles.subtitle}>
-        Congratulations! You have successfully navigated to nowhere. This page is either missing, classified, or hiding from you specifically. :(
+        Congratulations! You have successfully navigated to nowhere. This page
+        is either missing, classified, or hiding from you specifically. :(
       </p>
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>What Happens Next?</h2>
         <ul className={styles.list}>
-          <li>A highly detailed (and completely unnecessary) error report has been filed.</li>
+          <li>
+            A highly detailed (and completely unnecessary) error report has been
+            filed.
+          </li>
           <li>IT has been notified. They are... unimpressed.</li>
           <li>Security is now watching you with mild suspicion.</li>
         </ul>

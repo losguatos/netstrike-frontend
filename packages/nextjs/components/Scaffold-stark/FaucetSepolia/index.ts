@@ -1,1 +1,1 @@
-export * from  "./FaucetSepolia"
+export * from "./FaucetSepolia";

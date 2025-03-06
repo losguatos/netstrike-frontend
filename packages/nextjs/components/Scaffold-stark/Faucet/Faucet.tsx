@@ -41,20 +41,12 @@ export const Faucet = () => {
             </p>
             <p className="m-0">
               - Did you forget to run{" "}
-              <code className={FaucetStyles.codeOne}>
-                yarn chain
-              </code>{" "}
-              ?
+              <code className={FaucetStyles.codeOne}>yarn chain</code> ?
             </p>
             <p className="mt-1 break-normal">
               - Or you can change{" "}
-              <code className={FaucetStyles.codeTwo}>
-                targetNetwork
-              </code>{" "}
-              in{" "}
-              <code className={FaucetStyles.codeThree}>
-                scaffold.config.ts
-              </code>
+              <code className={FaucetStyles.codeTwo}>targetNetwork</code> in{" "}
+              <code className={FaucetStyles.codeThree}>scaffold.config.ts</code>
             </p>
           </>,
           {
@@ -90,10 +82,7 @@ export const Faucet = () => {
 
   return (
     <div>
-      <label
-        htmlFor="faucet-modal"
-        className={FaucetStyles.labelOne}
-      >
+      <label htmlFor="faucet-modal" className={FaucetStyles.labelOne}>
         <BanknotesIcon className={FaucetStyles.banknotesIcon} />
         <span>Faucet</span>
       </label>
@@ -102,10 +91,7 @@ export const Faucet = () => {
         <>
           <div className={FaucetStyles.divOne}>
             <h3 className={FaucetStyles.heading3}>Local Faucet</h3>
-            <label
-              htmlFor="faucet-modal"
-              className={FaucetStyles.labelTwo}
-            >
+            <label htmlFor="faucet-modal" className={FaucetStyles.labelTwo}>
               ✕
             </label>
           </div>

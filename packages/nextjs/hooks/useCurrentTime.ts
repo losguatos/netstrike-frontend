@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { formatLocalTime } from "../utils/format"; 
+import { formatLocalTime } from "../utils/format";
 
 export const useCurrentTime = (refreshInterval: number = 60000): string => {
-    const [currentTime, setCurrentTime] = useState<string>(formatLocalTime(new Date()));
+  const [currentTime, setCurrentTime] = useState<string>(
+    formatLocalTime(new Date()),
+  );
 
   useEffect(() => {
     const updateTime = () => {

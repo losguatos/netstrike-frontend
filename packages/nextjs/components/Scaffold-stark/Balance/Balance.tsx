@@ -51,7 +51,7 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
   ) {
     return (
       <div className={BalanceStyles.divOne}>
-        <div className= {BalanceStyles.divTwo}></div>
+        <div className={BalanceStyles.divTwo}></div>
         <div className={BalanceStyles.divThree}>
           <div className={BalanceStyles.divFour}></div>
         </div>
@@ -61,9 +61,7 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
 
   if (isError) {
     return (
-      <div
-        className={BalanceStyles.divFive}
-      >
+      <div className={BalanceStyles.divFive}>
         <div className="text-warning">Error</div>
       </div>
     );
@@ -96,16 +94,14 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
               <div className={BalanceStyles.divSeven}>
                 <div className="flex">
                   <span>{parseFloat(formatted).toFixed(4)}</span>
-                  <span  className={BalanceStyles.span}>
+                  <span className={BalanceStyles.span}>
                     {targetNetwork.nativeCurrency.symbol}
                   </span>
                 </div>
 
                 <div className="flex">
                   <span>{parseFloat(strkFormatted).toFixed(4)}</span>
-                  <span className={BalanceStyles.span}>
-                    {strkSymbol}
-                  </span>
+                  <span className={BalanceStyles.span}>{strkSymbol}</span>
                 </div>
               </div>
             </>
