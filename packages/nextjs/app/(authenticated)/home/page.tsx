@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { truncateAddress } from "~~/utils/format";
 import { classes } from "./page.styles";
 import { useAccount, useConnect } from "@starknet-react/core";

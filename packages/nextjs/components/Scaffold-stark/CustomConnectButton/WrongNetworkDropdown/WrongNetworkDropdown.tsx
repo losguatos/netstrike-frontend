@@ -10,18 +10,14 @@ export const WrongNetworkDropdown = () => {
 
   return (
     <div className={WrongNetworkDropdownStyles.parentDiv}>
-      <label
-        tabIndex={0}
-        className={WrongNetworkDropdownStyles.label}
-      >
+      <label tabIndex={0} className={WrongNetworkDropdownStyles.label}>
         <span>Wrong network</span>
-        <ChevronDownIcon className={WrongNetworkDropdownStyles.chevronDownIcon} />
+        <ChevronDownIcon
+          className={WrongNetworkDropdownStyles.chevronDownIcon}
+        />
       </label>
 
-      <ul
-        tabIndex={0}
-        className={WrongNetworkDropdownStyles.ul}
-      >
+      <ul tabIndex={0} className={WrongNetworkDropdownStyles.ul}>
         {/* TODO: reinstate if needed */}
         {/* <NetworkOptions /> */}
         <li>
@@ -30,7 +26,9 @@ export const WrongNetworkDropdown = () => {
             type="button"
             onClick={() => disconnect()}
           >
-            <ArrowLeftEndOnRectangleIcon className={WrongNetworkDropdownStyles.arrowLeftEndOnRectangleIcon} />
+            <ArrowLeftEndOnRectangleIcon
+              className={WrongNetworkDropdownStyles.arrowLeftEndOnRectangleIcon}
+            />
             <span>Disconnect</span>
           </button>
         </li>

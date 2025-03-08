@@ -39,10 +39,7 @@ export const BlockExplorer = () => {
 
   return (
     <div>
-      <label
-        htmlFor="blockexplorer-modal"
-        className={BlockStyles.labelOne}
-      >
+      <label htmlFor="blockexplorer-modal" className={BlockStyles.labelOne}>
         <MagnifyingGlassIcon className={BlockStyles.glassIcon} />
         <span>Block Explorer</span>
       </label>
@@ -54,10 +51,7 @@ export const BlockExplorer = () => {
       <GenericModal modalId="blockexplorer-modal">
         <div className={BlockStyles.divOne}>
           <h3 className={BlockStyles.heading3}>Mainnet Block Explorers</h3>
-          <label
-            htmlFor="blockexplorer-modal"
-            className={BlockStyles.labelTwo}
-          >
+          <label htmlFor="blockexplorer-modal" className={BlockStyles.labelTwo}>
             ✕
           </label>
         </div>
@@ -68,7 +62,7 @@ export const BlockExplorer = () => {
                 <a
                   href={blockexplorer.link}
                   target="_blank"
-                  className={` ${BlockStyles.a} ${isDarkMode ? BlockStyles.aDarkmode : BlockStyles.aNotDarkmode }`}
+                  className={` ${BlockStyles.a} ${isDarkMode ? BlockStyles.aDarkmode : BlockStyles.aNotDarkmode}`}
                   key={id}
                 >
                   <div className={BlockStyles.divFour}>
@@ -80,7 +74,9 @@ export const BlockExplorer = () => {
                       src={blockexplorer.img}
                     />
                   </div>
-                  <span className={BlockStyles.spanOne}>{blockexplorer.name}</span>
+                  <span className={BlockStyles.spanOne}>
+                    {blockexplorer.name}
+                  </span>
                 </a>
               ))}
           </div>

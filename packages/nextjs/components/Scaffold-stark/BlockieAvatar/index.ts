@@ -1,1 +1,1 @@
-export * from  "./BlockieAvatar"
+export * from "./BlockieAvatar";

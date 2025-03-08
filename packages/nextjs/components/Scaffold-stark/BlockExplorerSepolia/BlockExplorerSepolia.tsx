@@ -43,7 +43,9 @@ export const BlockExplorerSepolia = () => {
         htmlFor="sepolia-blockexplorer-modal"
         className={BlockExplorerSepoliaStyles.labelOne}
       >
-        <MagnifyingGlassIcon className={BlockExplorerSepoliaStyles.magnifyingGlassIcon} />
+        <MagnifyingGlassIcon
+          className={BlockExplorerSepoliaStyles.magnifyingGlassIcon}
+        />
         <span>Block Explorer</span>
       </label>
       <input
@@ -54,7 +56,9 @@ export const BlockExplorerSepolia = () => {
       <GenericModal modalId="sepolia-blockexplorer-modal">
         <>
           <div className={BlockExplorerSepoliaStyles.divOne}>
-            <h3 className={BlockExplorerSepoliaStyles.divOneHeading}>Sepolia Block Explorers</h3>
+            <h3 className={BlockExplorerSepoliaStyles.divOneHeading}>
+              Sepolia Block Explorers
+            </h3>
             <label
               htmlFor="sepolia-blockexplorer-modal"
               className={BlockExplorerSepoliaStyles.divOneLabel}
@@ -70,7 +74,9 @@ export const BlockExplorerSepolia = () => {
                     href={blockexplorer.link}
                     target="_blank"
                     className={` ${BlockExplorerSepoliaStyles.divTwoA} ${
-                      isDarkMode ? BlockExplorerSepoliaStyles.divTwoADarkmode :  BlockExplorerSepoliaStyles.divTwoALightMode
+                      isDarkMode
+                        ? BlockExplorerSepoliaStyles.divTwoADarkmode
+                        : BlockExplorerSepoliaStyles.divTwoALightMode
                     } border `}
                     key={id}
                   >
@@ -83,7 +89,9 @@ export const BlockExplorerSepolia = () => {
                         src={blockexplorer.img}
                       />
                     </div>
-                    <p className={BlockExplorerSepoliaStyles.explorerName}>{blockexplorer.name}</p>
+                    <p className={BlockExplorerSepoliaStyles.explorerName}>
+                      {blockexplorer.name}
+                    </p>
                   </a>
                 ))}
             </div>
