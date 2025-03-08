@@ -17,7 +17,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({
   disabled = false,
 }) => {
   const buttonClasses = `
-    ${menuButtonClasses.base}
+    ${!isActive && menuButtonClasses.base}
     ${!disabled && menuButtonClasses.hover}
     ${isActive && menuButtonClasses.active}
     ${disabled && menuButtonClasses.disabled}
