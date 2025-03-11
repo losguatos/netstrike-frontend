@@ -1,6 +1,6 @@
 export const ConnectModalStyles = {
   buttonLabel:
-    "block textShadowAnimation border-4 border-primary border-dashed [border-top-style:solid] [border-bottom-style:solid] text-5xl font-medium max-w-[504px] w-full py-4  hover:bg-primary hover:text-[#000000]  cursor-pointer   ",
+    "block border-4 border-primary border-dashed [border-top-style:solid] [border-bottom-style:solid] text-5xl font-medium max-w-[504px] w-full py-4  hover:bg-primary hover:text-[#000000]  cursor-pointer   ",
   headerDiv:
     "flex items-center justify-between border border-[#24dc8f] w-full py-1 px-4  ",
   headerHeading: "text-xl font-bold text-[#24DC8F] m-0 mx-1 ",
