@@ -1,5 +1,5 @@
 export const styles = {
-  button: `textShadowAnimation border-4 border-primary
+  button: `border-4 border-primary
     border-dashed [border-top-style:solid]
     [border-bottom-style:solid]
     text-5xl font-medium max-w-[504px] w-full py-4
